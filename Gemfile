@@ -43,6 +43,9 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "rspec-rails"
   gem "simplecov", require: false
+  gem "brakeman"
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
   gem "pry"
   gem "shoulda-matchers"
   gem "factory_bot_rails"
