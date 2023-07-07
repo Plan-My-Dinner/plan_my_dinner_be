@@ -18,13 +18,14 @@ body:
     validations:
       required: true
   - type: checkboxes
-  attributes:
-    label: Is this a route?
-    description: Does this feature have to do with a incoming request/routing?
-    options:
-    - label: Yes, this is for a new route
-    - label: Yes, this is for an existing route
-    - label: No, this is for a design/build/architecture feature/change
+    attributes:
+      label: Is this a route?
+      description: Does this feature have to do with a incoming request/routing?
+      options:
+        - label: Yes, this is for a new route
+        - label: Yes, this is for an existing route
+        - label: No, this is for a design/build/architecture feature/change
+    validations:
       required: true
   - type: dropdown
     attributes:
