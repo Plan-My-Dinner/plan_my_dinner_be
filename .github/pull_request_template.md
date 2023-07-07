@@ -1,5 +1,17 @@
 <!-- Erase any parts of this template not applicable to your Pull Request unless marked required. -->
-
+## What Type of PR is this? 
+- [ ] 🎁 Feature
+- [ ] 🐞 Bug Fix
+- [ ] 📝 Documentation Update
+- [ ] 🛠️ Code Refactor
+- [ ] 🔥 Performance Improvements
+- [ ] ✅ Test
+- [ ] 🤖 Build / CI/ DevOps
+- [ ] ⏪️ Revert 
+- [ ] 🙋 Request for Help
+- [ ] 💎 Adds dependencies
+- [ ] 📊 Changes DB
+- [ ] 👽 Other: _explain here_
 ## Describe your changes <!-- Required -->
   <sup>Please include a summary of the changes and the related issue. Please also include relevant motivation and context. List any dependencies that are required for this change.</sup>
 
@@ -23,11 +35,6 @@
 | ----- | ---------------- |
 | Non-breaking change which fixes an issue | **Yes** [ ] <br> **No** [ ] |
 | Breaking change (fix or feature that would cause existing functionality to not work as expected) | **Yes** [ ] <br> **No** [ ] |
-| Is a Bug fix | **Yes** [ ] <br> **No** [ ] |
-| Is a New feature | **Yes** [ ] <br> **No** [ ] |
-| Is a Dev-ops change | **Yes** [ ] <br> **No** [ ] |
-| Adds dependencies | **Yes** [ ] <br> **No** [ ] |
-| Changes the DB | **Yes** [ ] <br> **No** [ ] |
 
 | Testing | Complete |
 | ----- | ---------------- |
