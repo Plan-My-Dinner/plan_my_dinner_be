@@ -1,10 +1,9 @@
-name: Bug Report
+name: "Bug Report"
 description: Submit a bug report
 title: "[Bug]: "
   required: true
 labels: ["bug", "triage"]
-assignees:
-  - ' '
+assignees: ' '
 
 body:
   - type: markdown
