@@ -1,11 +1,8 @@
 name: Documentation Missing
 description: Current Documentation is not clear or missing needed info
 title: "[Documentation]: "
-  required: true
 labels: ["documentation", "triage"]
-assignees:
-  - ' '
-
+assignees: " "
 body:
   - type: markdown
     attributes:

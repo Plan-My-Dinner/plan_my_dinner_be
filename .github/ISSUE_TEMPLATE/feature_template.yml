@@ -1,11 +1,8 @@
 name: Confirmed Feature Ticket
 description: Confirmed Feature that needs to be Implemented
 title: "[Feature]: <CRUD ACTION if applicable> <feature description>"
-  required: true
 labels: ["feature"]
-assignees:
-  - ' '
-
+assignees: ' '
 body:
   - type: markdown
     attributes:
