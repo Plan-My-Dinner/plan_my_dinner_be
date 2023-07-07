@@ -1,0 +1,77 @@
+name: Confirmed Feature Ticket
+description: Confirmed Feature that needs to be Implemented
+title: "[Feature]: <CRUD ACTION if applicable> <feature description>"
+  required: true
+labels: ["feature"]
+assignees:
+  - ' '
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        #### Please utilize GitHubs Branch creation within issue to create and name branch. 
+        Branches MUST have descriptive names that start with the Issue number and then either the `fix/` or `feature/` prefixes. Good examples are: `10/fix/signin-issue` or `22/feature/issue-templates`.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Feature description 
+      description: A concise description of what this feature will do.
+    validations:
+      required: true
+  - type: checkboxes
+  attributes:
+    label: Is this a route?
+    description: Does this feature have to do with a incoming request/routing?
+    options:
+    - label: Yes, this is for a new route
+    - label: Yes, this is for an existing route
+    - label: No, this is for a design/build/architecture feature/change
+      required: true
+  - type: dropdown
+    attributes:
+      label: CRUD Action
+      description: Select the CRUD Action for the route
+      options:
+        - label: N/A
+        - label: GET
+        - label: POST
+        - label: PATCH
+        - label: PUT
+        - label: DELETE
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: Route Path / Description
+      description: Rest of route path OR indicate what the type of feature is if not route
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Success - JSON Contract Example
+      description: "Success: JSON Contract Example"
+      render: shell
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: Success - Return status code
+      description: "Success: Return status code"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Fail - JSON Contract Example(s)
+      description: "Error: JSON Contract Example(s) - Indicate Return Status Code before each example"
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        Anything else? Need to be considered or known about this feature?
+    validations:
+      required: false

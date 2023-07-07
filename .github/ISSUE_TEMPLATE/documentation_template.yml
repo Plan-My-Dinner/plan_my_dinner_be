@@ -1,0 +1,39 @@
+name: Documentation Missing
+description: Current Documentation is not clear or missing needed info
+title: "[Documentation]: "
+  required: true
+labels: ["documentation", "triage"]
+assignees:
+  - ' '
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        #### Please utilize GitHubs Branch creation within issue to create and name branch. 
+        Branches MUST have descriptive names that start with the Issue number and then either the `fix/` or `feature/` prefixes. Good examples are: `10/fix/signin-issue` or `22/feature/issue-templates`.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Documentation description 
+      description: A description of what the documentation issue.
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Is this missing info?
+      description: What type of Documentation Update?
+      options:
+        - label: Documentation Missing Info
+        - label: Current Documentation Not Clear
+        - label: Additional Document for Org. Collaborator Use
+      validations:
+        required: true
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        Anything else? Need to be considered or known about this feature?
+    validations:
+      required: false
