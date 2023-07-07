@@ -1,5 +1,8 @@
 # See https://docs.rubocop.org/rubocop/1.54/usage/basic_usage.html and https://github.com/rubocop/rubocop/blob/master/config/default.yml for any additional configuration needs
 
+require: 
+  - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   Exclude:
@@ -8,6 +11,8 @@ AllCops:
     - 'script/**/*'
     - 'bin/{bundle,setup,rails,rake}'
     - 'spec/{rails_helper.rb,spec_helper.rb}'
+    - 'vendor/bundle/**/*'
+  # NewCops: enable
 
 Style/FrozenStringLiteralComment:
   Description: >-
