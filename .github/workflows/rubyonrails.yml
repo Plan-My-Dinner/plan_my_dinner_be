@@ -35,8 +35,7 @@ jobs:
           bundler-cache: true
       - name: Bundle install
         run:
-          gem install bundler
-          bundle install --jobs 4 --retry 3
+          bundle install #--jobs 4 --retry 3
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bundle exec rails db:setup

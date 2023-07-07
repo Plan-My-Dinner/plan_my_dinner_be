@@ -1,0 +1,20 @@
+# See https://docs.rubocop.org/rubocop/1.54/usage/basic_usage.html and https://github.com/rubocop/rubocop/blob/master/config/default.yml for any additional configuration needs
+
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{bundle,setup,rails,rake}'
+    - 'spec/{rails_helper.rb,spec_helper.rb}'
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+                 Add the frozen_string_literal comment to the top of files
+                 to help transition to frozen string literals by default.
+  Enabled: false
+
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
