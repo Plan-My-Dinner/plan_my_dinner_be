@@ -60,14 +60,9 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop
 
-name: Fly Deploy
-on:
-  push:
-    branches:
-      - main
-jobs:
   deploy:
-    name: Deploy app
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: [test, lint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
