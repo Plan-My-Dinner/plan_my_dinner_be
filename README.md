@@ -1,4 +1,4 @@
-[![Ruby on Rails CI](https://github.com/Plan-My-Dinner/plan_my_dinner_be/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/Plan-My-Dinner/plan_my_dinner_be/actions/workflows/rubyonrails.yml)
+[![Ruby on Rails CI/CD](https://github.com/Plan-My-Dinner/plan_my_dinner_be/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/Plan-My-Dinner/plan_my_dinner_be/actions/workflows/rubyonrails.yml)
 
 
 # README
