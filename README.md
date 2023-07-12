@@ -1,5 +1,6 @@
 [![Ruby on Rails CI/CD](https://github.com/Plan-My-Dinner/plan_my_dinner_be/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/Plan-My-Dinner/plan_my_dinner_be/actions/workflows/rubyonrails.yml)
 
+### Deployed using <a href='https://planmydinner.fly.dev/'><img src='public/images/fly-logo-landscape-inverted.png' alt='Fly.io logo' width='75'></a>
 
 # README
 
