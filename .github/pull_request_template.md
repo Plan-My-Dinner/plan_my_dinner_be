@@ -27,19 +27,19 @@
 
 | Repo Contribution Standards| Complete |
 | ----- | ---------------- |
-| I have performed a self-review of my code | **Yes** [ ] <br> **No** [ ] |
-| My code follows the style guidelines of this project| **Yes** [ ] <br> **No** [ ] |
-| I have made corresponding changes to the documentation (Note: Documentation _must_ be up to date for merge)| **Yes** [ ] <br> **No** [ ] |
+| I have performed a self-review of my code | <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
+| My code follows the style guidelines of this project| <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
+| I have made corresponding changes to the documentation (Note: Documentation _must_ be up to date for merge)| <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
 
 | Change Type | Complete |
 | ----- | ---------------- |
-| Non-breaking change which fixes an issue | **Yes** [ ] <br> **No** [ ] |
-| Breaking change (fix or feature that would cause existing functionality to not work as expected) | **Yes** [ ] <br> **No** [ ] |
+| Non-breaking change which fixes an issue | <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
+| Breaking change (fix or feature that would cause existing functionality to not work as expected) | <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
 
 | Testing | Complete |
 | ----- | ---------------- |
-| I have added tests that prove my fix is effective or that my feature works | **Yes** [ ] <br> **No** [ ] |
-| New and existing tests pass locally with my changes | **Yes** [ ] <br> **No** [ ] |
+| I have added tests that prove my fix is effective or that my feature works | <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
+| New and existing tests pass locally with my changes | <ul><li> [ ] **Yes** </li><li> [ ] **No**</li> |
 
 ## Any additional collaborators for this PR?
 <!-- Tag anyone else on the project that can answer questions on this PR -->
