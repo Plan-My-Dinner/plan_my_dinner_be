@@ -12,10 +12,10 @@ jobs:
     needs: test
     steps:
       - name: Download coverage report
-      uses: actions/download-artifact@v2
-      with:
-        name: coverage-report
-        path: coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage-report
+          path: coverage 
 
       - name: Check coverage
         uses: vigetlabs/simplecov-check@v1.0

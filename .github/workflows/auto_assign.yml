@@ -13,6 +13,6 @@ jobs:
     - name: 'Auto-assign issue'
       uses: pozil/auto-assign-issue@v1
       with:
-          repo-token: ${{ secrets.TEAM_ACTIONS_PAT }}
-          assignees: /backend_team
-          numOfAssignee: 0
+        repo-token: ${{ secrets.TEAM_ACTIONS_PAT }}
+        assignees: /backend_team
+        numOfAssignee: 0
