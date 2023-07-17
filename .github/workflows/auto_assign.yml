@@ -14,5 +14,5 @@ jobs:
       uses: pozil/auto-assign-issue@v1
       with:
         repo-token: ${{ secrets.TEAM_ACTIONS_PAT }}
-        assignees: /backend-team
+        assignees: Plan-My-Dinner/backend-team
         numOfAssignee: 0
