@@ -9,7 +9,6 @@ jobs:
   coverage:
     name: SimpleCov Coverage Report
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Download coverage report
         uses: actions/download-artifact@v2
