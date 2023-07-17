@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
         #### Please utilize GitHubs Branch creation within issue to create and name branch. 
-        Branches MUST have descriptive names that start with the Issue number and then either the `fix/` or `feature/` prefixes. Good examples are: `10/fix/signin-issue` or `22/feature/issue-templates`.
+        Branches MUST have descriptive names that start with the Issue number and then either the 'build-','fix-` or `feature-` prefixes. Good examples are: `10-fix-signin-issue` or `22-feature-issue-templates`.
     validations:
       required: false
   - type: textarea
