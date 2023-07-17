@@ -1,0 +1,18 @@
+# https://github.com/marketplace/actions/auto-assign-issues-prs for reference of action set-up
+name: Auto Assign
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - name: 'Auto-assign issue'
+      uses: pozil/auto-assign-issue@v1
+      with:
+        repo-token: ${{ secrets.TEAM_ACTIONS_PAT }}
+        assignees: /backend_team
+        numOfAssignee: 0
