@@ -1,33 +1,43 @@
-name: Documentation Issue
-description: Current Documentation is not clear, missing info, or needs an update
-title: "[Documentation]: "
-labels: ["documentation", "triage"]
+name: Database Ticket
+description: Confirmed Database Feature that needs to be implemented
+title: "[Database]:"
+labels: ["database", "feature"]
 assignees: 
   - " "
 body:
   - type: textarea
     attributes: 
-      label: Is this new documentation or an update to existing documentation? 
+      label: Is this a new database table or an update to an existing table/schema? 
       description: |
-        The update includes Current Documentation is Not Clear
         Leave the :white_check_mark: `:white_check_mark:` to indicate **Yes**, leave the :x: `:x:` to indicate **No**.
       value: |
-        | :x: :white_check_mark: New/Missing Documentation |  :x: :white_check_mark: Update Documentation |
+        | :x: :white_check_mark: New Database Table |  :x: :white_check_mark: Update Existing Database Table |
         | --- | --- |
       render: markdown
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Documentation Description and Requirements
-      description: A description of the documentation issue and task list of requirements.
+      label: Database/Model Description and Requirements
+      description: |
+        Include:
+          - What Type of Database is being used? (PostgreSQL, MySQL, GraphQL, MongoDB)
+          - A description/outline of the Database Fields or Changes.
+          - Relationship description
+          - List of requirements for Schema and Model
       placeholder: |
         Example:
-         -[ ] Create an About Section that gives a brief description of what the app is for
-         -[ ] Add applicable Badges for current Tech and CI/CD
-         -[ ] Set up instructions for new collaborators
-         -[ ] Info about the API we are using
-         -[ ] Table of contents
+        Create the User Model using PostgreSQL
+
+        1. Needs the following attributes:
+           - [ ] First name - String
+           - [ ] Last name - String
+           - [ ] Email - String
+           - [ ] Password Digest - String
+           - [ ] Timestamps (created/updated) - DateTime
+        2. Setup Password encryption
+        3. Add Documentation as and if needed
+      render: markdown
     validations:
       required: true
   - type: textarea
@@ -42,6 +52,10 @@ body:
       label: Do NOT edit this area.
       value: |
         ## General Issue Reminders:
+
+        1. Test for validations.
+        2. Test happy / sad / and edge cases
+        3. Add Documentation as and if needed
 
         **Remember:** Use GitHub branch creation for naming
         ![Branch Creation Link Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/02a38b44-fe31-4421-8400-546a99e48589))

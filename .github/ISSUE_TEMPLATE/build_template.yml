@@ -1,0 +1,66 @@
+name: Build or Design Ticket
+description: "Adding or Changing Build/Architecture/DevOps/Design for Repo (eg: CI/CD)"
+title: "[Build]:"
+labels: ["build", "feature"]
+assignees: 
+  - " "
+body:
+  - type: textarea
+    attributes: 
+      label: Is this new or an update to the existing repo build? 
+      description: |
+        Leave the :white_check_mark: `:white_check_mark:` to indicate **Yes**, leave the :x: `:x:` to indicate **No**.
+      value: |
+        | :x: :white_check_mark: New Build |  :x: :white_check_mark: Update Current Build |
+        | --- | --- |
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Build Description and Requirements
+      description: "A description of the Build/Design happening on repo, why it's needed, and a task list of requirements."
+      placeholder: |
+        Example:
+         Set up CI using GitHub Actions
+        1. On Push
+            - [ ] Test code with RSpec
+            - [ ] Check code security with Breakerman
+            - [ ] Check syntax with RuboCop
+        2. On Pull Request
+            - [ ] Same checks as above
+            - [ ] Prevent merge if Checks Fail
+        3. Set up configuration files for the checks that need to run
+        4. Add synced Status Badges on ReadMe
+        5. Provide useful references links and run steps in the documentation for other team members to utilize
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What is the Expected Behavior?
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        1. If this is a change/update to current, indicate why the decision to change.
+        2. Anything else? Need to be considered or known about this feature? Concerns?
+        3. Links to useful references, implementation info, research docs, pictures/images...
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Do NOT edit this area.
+      value: |
+        ## General Issue Reminders:
+
+        **Remember:** Use GitHub branch creation for naming
+        ![Branch Creation Link Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/02a38b44-fe31-4421-8400-546a99e48589))
+
+        - Branches MUST have descriptive names that start with the Issue number. Good examples are: `10-fix-signin-issue` or `22-feature-issue-templates`.
+
+        ![Naming Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/661e7e72-2d3a-46a5-8e5e-2b0852e6e6f1)
+      render: markdown
+    validations:
+      required: true

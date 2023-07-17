@@ -67,10 +67,22 @@ body:
         Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
     validations:
       required: false
-  - type: markdown
+  - type: textarea
     attributes:
+      label: Do NOT edit this area.
       value: |
-        #### Please utilize GitHubs Branch creation within issue to create and name branch. 
-        Branches MUST have descriptive names that start with the Issue number and then either the `fix/` or `feature/` prefixes. Good examples are: `10/fix/signin-issue` or `22/feature/issue-templates`.
+        ## General Issue Reminders:
+
+        1. Test for validations.
+        2. Test happy / sad / and edge cases
+        3. Add Documentation as and if needed
+
+        **Remember:** Use GitHub branch creation for naming
+        ![Branch Creation Link Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/02a38b44-fe31-4421-8400-546a99e48589))
+
+        - Branches MUST have descriptive names that start with the Issue number. Good examples are: `10-fix-signin-issue` or `22-feature-issue-templates`.
+
+        ![Naming Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/661e7e72-2d3a-46a5-8e5e-2b0852e6e6f1)
+      render: markdown
     validations:
-      required: false
+      required: true

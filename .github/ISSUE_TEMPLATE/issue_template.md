@@ -43,18 +43,19 @@ Browser: Google Chrome
 Deployment Website: Fly.io
 -->
 
-### Anything else:
+## Anything else:
 <!--
 Links? References? Anything that will give us more context about the issue that you are encountering!
 -->
 
-## General Issue Reminders:
+### General Issue Reminders:
 
 1. Test happy / sad / and edge cases
 2. Add Documentation as and if needed
 
 **Remember:** Use GitHub branch creation for naming
-![Branch Creation Link Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/02a38b44-fe31-4421-8400-546a99e48589))
+
+![Branch Creation Link Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/02a38b44-fe31-4421-8400-546a99e48589)
 
 - Branches MUST have descriptive names that start with the Issue number. Good examples are: `10-fix-signin-issue` or `22-feature-issue-templates`.
 

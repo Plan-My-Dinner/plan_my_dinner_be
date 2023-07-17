@@ -1,0 +1,105 @@
+name: Routing/API Ticket
+description: Confirmed Routing/Controller/JSON Feature that needs to be implemented
+title: "[Route]:"
+labels: ["route", "feature"]
+assignees: 
+  - " "
+body:
+  - type: textarea
+    attributes: 
+      label: Is this a new route or an update to an existing route? 
+      description: |
+        Updates include updates to Controllers or JSON Contract. New Routes include new versioning.
+        Leave the :white_check_mark: `:white_check_mark:` to indicate **Yes**, leave the :x: `:x:` to indicate **No**.
+      value: |
+        | :x: :white_check_mark: New route |  :x: :white_check_mark: Update an existing route |
+        | --- | --- |
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Feature description 
+      description: A concise description of what this feature will do and any requirements.
+      placeholder: |
+        Example:
+        This route should make a call to [lookup full recipe details](URL to a specific part of API Schema, if known) by id using [TheMealDB](URL to API landing page).
+         - The end of the URI is the API's ID for the recipe
+         - Gets info for the requested recipe and sends recipe info to FE
+         - Sends FE the following info for each recipe: `ID`, `Name`, `Picture`
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Route Path and any additional HTTP Request Info __(ex. Body, Headers, etc.)__
+      description: |
+        Expected route path and action **or** Current route path and controller action
+         - CRUD Actions (GET, POST, PATCH, PUT, DELETE)
+      placeholder: "ex: GET `v1/recipe/<id>` or SHOW `v1/recipe/<id>`"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Success - Return status code
+      value: "200"
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Success - JSON Contract Example
+      render: JSON
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Error - JSON Contract Example(s)
+      description: |
+        What situations might cause a request to Error?
+        Provide a list and JSON Examples of all Errors (Sad Paths) you know might occur.
+         - Indicate Return Status Code with each example
+      placeholder: |
+        Example:
+        Error Message for Service Unavailable
+        { Error: {
+                  Message: "API Unavailable",
+                  Status: 503
+                  }
+      render: JSON
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        Anything else? Need to be considered or known about this feature?
+      placeholder: |
+        Examples:
+         - CORS
+         - Authentication
+         - Model changes
+         - Reach out to a particular team member (tag them with the "@username")
+         - Tech or concepts to research?
+         - Rabbit holes to avoid/ discussed aspects that do not need to be implemented yet
+         - Related issues? (link them using the "#" followed by the issue number)
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Do NOT edit this area.
+      value: |
+        ## General Issue Reminders:
+
+        1. Test happy / sad / and edge cases
+        2. Add Documentation as and if needed
+
+        **Remember:** Use GitHub branch creation for naming
+        
+        ![Branch Creation Link Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/02a38b44-fe31-4421-8400-546a99e48589)
+
+        - Branches MUST have descriptive names that start with the Issue number. Good examples are: `10-fix-signin-issue` or `22-feature-issue-templates`.
+
+        ![Naming Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/661e7e72-2d3a-46a5-8e5e-2b0852e6e6f1)
+      render: markdown
+    validations:
+      required: true
