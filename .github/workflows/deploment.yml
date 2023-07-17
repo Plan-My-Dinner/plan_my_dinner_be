@@ -2,13 +2,12 @@ name: "Fly Deployment"
 on:
   workflow_run:
     workflows: ["CI Testing"]
-    types: [requested]
+    types: [completed]
     branches: ["main"]
 jobs:
   deploy:
     name: Deploy App
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    needs: [test, lint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
