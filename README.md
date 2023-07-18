@@ -22,7 +22,7 @@ Frontend Deployed to:
 - Backend Team
   - [Aleisha Mork](https://github.com/aleish-m)
   - [Taryn Orlemann](https://github.com/torlemann)
-  - [Gabe Nunez](https://github.com/Rileybmcc)
+  - [Gabe Nuñez](https://github.com/gabrielcnunez)
   - [Thomas Musselman](https://github.com/musselmanth)
   - [Tamara Dowis](https://github.com/wanderlust-create)
 - Frontend Team
