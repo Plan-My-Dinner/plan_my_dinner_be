@@ -31,9 +31,9 @@ Frontend Deployed to:
 
 ## Prerequisites
 
-This project used `Ruby 2.7.4`
+This project used `Ruby 3.2.2`
 
-- with Rails `5.2.x`
+- with Rails `7.0.6`
 - and used `PostgreSQL`
 
 ## Setup/Install
@@ -43,7 +43,7 @@ This project used `Ruby 2.7.4`
 - From the command line, install gems and set up your DB:
   - `bundle`
 - API used
-  -
+  - 
 - Run `rails db:{create,migrate,seed}`
 - Run the test suite with `bundle exec rspec`.
 
