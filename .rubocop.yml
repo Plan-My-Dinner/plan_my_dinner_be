@@ -23,3 +23,11 @@ Style/FrozenStringLiteralComment:
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
+
+RSpec/ExampleLength:
+  Description: 'Checks for long examples.'
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Description: 'Checks if examples contain too many expect calls.'
+  Enabled: false
