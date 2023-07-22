@@ -84,6 +84,5 @@ body:
         - Branches MUST have descriptive names that start with the Issue number. Good examples are: `10-fix-signin-issue` or `22-feature-issue-templates`.
 
         ![Naming Image](https://github.com/Plan-My-Dinner/plan_my_dinner_be/assets/105686836/661e7e72-2d3a-46a5-8e5e-2b0852e6e6f1)
-      render: markdown
     validations:
       required: true
