@@ -2,7 +2,7 @@ name: "Fly Deployment"
 on:
   workflow_run:
     workflows: ["CI Testing"]
-    types: [requested]
+    types: [completed]
     branches: ["main"]
 jobs:
   deploy:
