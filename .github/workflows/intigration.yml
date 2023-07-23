@@ -42,12 +42,29 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bundle exec rspec
-      # - name: Upload coverage results
-      #   uses: actions/upload-artifact@v2
-      #   if: always()
-      #   with:
-      #     name: coverage-report
-      #     path: coverage
+      - name: Upload coverage results
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage
+  coverage:
+  # Action Reference documentation https://github.com/marketplace/actions/simplecov-check
+    name: SimpleCov Coverage Report
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: ${{ success() }}
+    steps:
+      - name: Download coverage report
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage-report
+          path: coverage 
+      - name: Check coverage
+        uses: vigetlabs/simplecov-check@1.0
+        with:
+          minimum_coverage: 90
+          coverage_path: coverage/.last_run.json
 
   lint:
     runs-on: ubuntu-latest
