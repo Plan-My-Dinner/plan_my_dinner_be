@@ -9,16 +9,8 @@ jobs:
   assign:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-    - name: 'Auto-assign issue'
-      uses: pozil/auto-assign-issue@v1
-      with:
-        repo-token: ${{ secrets.TEAM_ACTIONS_PAT }}
-        teams: Plan-My-Dinner/backend-team
-=======
       - uses: wow-actions/auto-assign@v3.0.2
         with:
           GITHUB_TOKEN: ${{ secrets.TEAM_ACTIONS_PAT }}
           reviewers: |
             Plan-My-Dinner/backend-team
->>>>>>> 90d6f7d13a7c60a474e627832f27a08ac795ac33

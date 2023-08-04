@@ -48,8 +48,7 @@ jobs:
         with:
           name: coverage-report
           path: coverage
-<<<<<<< HEAD
-=======
+  
   coverage:
   # Action Reference documentation https://github.com/marketplace/actions/simplecov-check
     name: SimpleCov Coverage Report
@@ -67,7 +66,6 @@ jobs:
         with:
           minimum_coverage: 90
           coverage_path: coverage/.last_run.json
->>>>>>> 90d6f7d13a7c60a474e627832f27a08ac795ac33
 
   lint:
     runs-on: ubuntu-latest
