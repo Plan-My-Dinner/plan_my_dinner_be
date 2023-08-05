@@ -23,3 +23,7 @@ Style/FrozenStringLiteralComment:
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
+
+Layout/CommentIndentation: 
+  Description: Incorrect indentation detected
+  Enabled: false
