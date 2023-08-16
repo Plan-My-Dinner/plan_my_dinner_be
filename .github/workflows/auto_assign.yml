@@ -1,4 +1,4 @@
-# https://github.com/marketplace/actions/auto-assign-issues-prs for reference of action set-up 
+# https://github.com/marketplace/actions/auto-assign-issues-prs for reference of action set-up
 name: Auto Assign
 on:
   issues:

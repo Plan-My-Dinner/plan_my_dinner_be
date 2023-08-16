@@ -1,6 +1,6 @@
 # See https://docs.rubocop.org/rubocop/1.54/usage/basic_usage.html and https://github.com/rubocop/rubocop/blob/master/config/default.yml for any additional configuration needs
 
-require: 
+require:
   - rubocop-rails
   - rubocop-rspec
 
@@ -23,3 +23,19 @@ Style/FrozenStringLiteralComment:
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
+
+Layout/CommentIndentation:
+  Description: Incorrect indentation detected
+  Enabled: false
+
+Layout/LineLength:
+  Description: Line is too long.
+  Max: 199
+
+RSpec/MultipleExpectations:
+  Description: Example has too many expectations
+  Max: 2
+
+RSpec/ExampleLength:
+  Description: Example has too many lines.
+  Max: 8
