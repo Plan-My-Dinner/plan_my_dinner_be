@@ -8,4 +8,8 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :email, uniqueness: { case_sensitive: false }
   has_secure_password
+
+  ## RELATIONSHIPS
+  has_many :saved_recipies
+  has_many :scheduled_recipies, through: :saved_recipies
 end
