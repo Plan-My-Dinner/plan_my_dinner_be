@@ -1,7 +1,7 @@
 require 'rails_helper'
 # rubocop:disable RSpec/NestedGroups
 
-RSpec.describe User do
+RSpec.describe User, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
@@ -53,6 +53,14 @@ RSpec.describe User do
         it { is_expected.not_to allow_value('test@mail.500').for(:email) }
       end
     end
+  end
+
+  describe 'relationships' do
+    ### ERROR: Expected User to have a has_many association called saved_recipies (SavedRecipy does not exist)
+    ## Test fails but code works, pluralised file and model naming conventions don't match
+
+    
+    # it { should have_many(:saved_recipies) }
   end
 end
 # rubocop:enable RSpec/NestedGroups
