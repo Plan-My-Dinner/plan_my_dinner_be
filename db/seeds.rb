@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+## Register a user
+user = User.create!(email: 'random@test7.com', password: 'password123', password_confirmation: 'password123')
+
+### ERROR: the attribute favortied has to be true or else it fails the validation check 
+## Save a recipie with the id of 1
+recipie = SavedRecipie.create!(user_id: user.id, api_recipie_id: 1, favorited: true)
+
+## Schedule a recipie
+ScheduledRecipie.create(saved_recipie_id: recipie.id, scheduled_date: DateTime.new(2006, 8, 5, 15, 5, 15))
