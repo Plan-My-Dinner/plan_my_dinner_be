@@ -10,6 +10,6 @@ class User < ApplicationRecord
   has_secure_password
 
   ## RELATIONSHIPS
-  has_many :saved_recipies
+  has_many :saved_recipies, class_name: 'SavedRecipie'
   has_many :scheduled_recipies, through: :saved_recipies
 end
