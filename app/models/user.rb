@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_secure_password
 
   ## RELATIONSHIPS
-  has_many :saved_recipies, class_name: 'SavedRecipie'
+    # Specifies assocation name and that a users saved recipies are deleted when the user is
+  has_many :saved_recipies, class_name: 'SavedRecipie', dependent: :destroy
+
   has_many :scheduled_recipies, through: :saved_recipies
 end

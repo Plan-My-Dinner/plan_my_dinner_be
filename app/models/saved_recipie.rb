@@ -1,11 +1,10 @@
 class SavedRecipie < ApplicationRecord
   ## VALIDATIONS
-    validates :user_id, presence: true
-    validates :user, presence: true
-    validates :api_recipie_id, numericality: { only_integer: true }
-    validates :favorited, inclusion: [true, false]
+  validates :api_recipie_id, numericality: { only_integer: true }
+  validates :favorited, inclusion: [true, false]
+  validates_associated :user
 
   ## RELATIONSHIPS
-    belongs_to :user
+  belongs_to :user
     # has_many :scheduled_recipies
 end
