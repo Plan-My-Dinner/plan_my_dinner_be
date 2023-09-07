@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_25_191958) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_07_021007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "saved_recipies", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "api_recipie_id", null: false
-    t.boolean "favorited", null: false
+    t.integer "api_recipie_id"
+    t.boolean "favorited", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_saved_recipies_on_user_id"
