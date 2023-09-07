@@ -18,7 +18,7 @@ RSpec.describe SavedRecipie do
       let(:user) { User.create(email: 'random@test3.com', password: 'password123', password_confirmation: 'password123') }
 
       it 'favorited doesnt exist' do
-        saved_recipie = described_class.create(user_id: user.id, favorited: true, api_recipie_id: 1)
+        saved_recipie = described_class.create(user_id: user.id, api_recipie_id: 1)
         ## The recipie is saved succsessfuly
         expect(saved_recipie).to be_valid
         ## The recipie is defaulted to not favorited
