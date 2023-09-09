@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe SavedRecipie do
   describe 'validations' do
+    it { is_expected.to belong_to(:user) }
+    it { is_expected.to validate_inclusion_of(:favorited).in_array([true, false]) }
+    it { is_expected.to validate_numericality_of(:api_recipie_id).only_integer }
+
     describe 'recipie is sucsessfully saved' do
       let(:user) { User.create!(email: 'random@test4.com', password: 'password123', password_confirmation: 'password123') }
 

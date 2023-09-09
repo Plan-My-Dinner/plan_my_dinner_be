@@ -6,5 +6,4 @@ class SavedRecipie < ApplicationRecord
 
   ## RELATIONSHIPS
   belongs_to :user
-    # has_many :scheduled_recipies
 end
