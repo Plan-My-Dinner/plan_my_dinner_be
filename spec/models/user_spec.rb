@@ -54,5 +54,9 @@ RSpec.describe User do
       end
     end
   end
+
+  describe 'relationships' do
+    it { is_expected.to have_many(:saved_recipies) }
+  end
 end
 # rubocop:enable RSpec/NestedGroups

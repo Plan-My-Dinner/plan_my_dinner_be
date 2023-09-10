@@ -8,4 +8,10 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :email, uniqueness: { case_sensitive: false }
   has_secure_password
+
+  ## RELATIONSHIPS
+    # Specifies assocation name and that a users saved recipies are deleted when the user is
+  has_many :saved_recipies, class_name: 'SavedRecipie', dependent: :destroy
+
+  has_many :scheduled_recipies, through: :saved_recipies
 end
