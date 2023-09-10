@@ -6,31 +6,38 @@ RSpec.describe SavedRecipe do
   end
 
   describe 'validations' do
-    it { is_expected.to belong_to(:user) }
+    let(:user) { create(:user) }
+
     it { is_expected.to validate_inclusion_of(:favorited).in_array([true, false]) }
     it { is_expected.to validate_numericality_of(:api_recipe_id).only_integer }
 
     describe 'recipe is successfully saved' do
-      let(:user) { User.create!(email: 'random@test4.com', password: 'password123', password_confirmation: 'password123') }
-
       it 'recipe is saved successfully' do
-        saved_recipe = described_class.create(user_id: user.id, favorited: true, api_recipe_id: 1)
-        ## The recipe is saved successfully
+        saved_recipe = create(:saved_recipe, user:)
+
         expect(saved_recipe).to be_valid
-        ## The recipe is saved to the user
         expect(saved_recipe.user_id).to eq(user.id)
       end
     end
 
     describe 'attributes are missing' do
-      let(:user) { User.create(email: 'random@test3.com', password: 'password123', password_confirmation: 'password123') }
-
-      it "favorited doesn't exist" do
+      it 'still saves if favorited is not provided' do
         saved_recipe = described_class.create(user_id: user.id, api_recipe_id: 1)
-        ## The recipe is saved successfully
+
         expect(saved_recipe).to be_valid
-        ## The recipe is defaulted to not favorited
+      end
+
+      it 'defaults to false if favorited is not provided' do
+        saved_recipe = described_class.create(user_id: user.id, api_recipe_id: 1)
         expect(saved_recipe.favorited).to be(false)
+      end
+
+      it 'does not save if User Id is not provided' do
+        expect { create(:saved_recipe, user_id: nil) }.to raise_error('Validation failed: User must exist')
+      end
+
+      it 'does not save if User Id does not match an existing User' do
+        expect { create(:saved_recipe, user_id: 3) }.to raise_error('Validation failed: User must exist')
       end
     end
   end
