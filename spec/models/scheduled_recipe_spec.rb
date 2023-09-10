@@ -1,40 +1,33 @@
 require 'rails_helper'
 
 RSpec.describe ScheduledRecipe do
-
   describe 'relationships' do
-    it { should have_many(:saved_recipes) }
+    it { is_expected.to belong_to(:saved_recipe) }
+    it { is_expected.to have_one(:user).through(:saved_recipe) }
   end
 
   describe 'validations' do
-    ## Create user, create recipe with users id, then set schedule date
-    let!(:user) { User.create(email: 'random@test.com', password: 'password123', password_confirmation: 'password123') }
-    let!(:saved_recipe) { SavedRecipe.create!(user_id: user.id, api_recipe_id: 1, favorited: false) }
     let(:scheduled_date) { DateTime.new(2006, 8, 5, 15, 5, 15) }
+    let!(:saved_recipe) { create(:saved_recipe) }
 
-    describe 'recipe is successfully scheduled' do
-      it 'schedules the recipe correctly' do
-        scheduled_recipe = ScheduledRecipe.create(saved_recipe_id: saved_recipe.id, scheduled_date: scheduled_date)
+    it { is_expected.to validate_presence_of(:scheduled_date) }
 
-        ## Check for recipe being successfully scheduled
+    describe 'Recipe is successfully scheduled' do
+      it 'if valid Saved Recipe Id is provided and date provided' do
+        scheduled_recipe = create(:scheduled_recipe, saved_recipe:, scheduled_date:)
+
+        expect(scheduled_recipe).to be_valid
         expect(scheduled_recipe).to have_attributes(saved_recipe_id: saved_recipe.id, scheduled_date: DateTime.new(2006, 8, 5, 15, 5, 15))
-        expect(scheduled_recipe.saved_recipe_id).to eq(saved_recipe.id)
       end
     end
 
-    describe 'attributes are missing' do
-      it "saved_recipes_id doesn't exist" do
-        scheduled_recipe = ScheduledRecipe.create(saved_recipe_id: saved_recipe.id, scheduled_date: scheduled_date)
-
-        ## Check that ScheudleRecipe wasn't created
-        expect(scheduled_recipe).to be_nil
+    describe 'Recipe fails to be scheduled' do
+      it 'if Saved Recipe Id is not provided' do
+        expect { create(:scheduled_recipe, saved_recipe_id: nil) }.to raise_error('Validation failed: Saved recipe must exist')
       end
 
-      it 'scheduled_date doesnt exist' do
-        scheduled_recipe = ScheduledRecipe.create(saved_recipe_id: saved_recipe.id, scheduled_date: scheduled_date)
-
-        ## Check that ScheduledRecipe wasn't created
-        expect(scheduled_recipe).to be_nil
+      it 'if Saved Recipe Id does not match an existing Saved Recipe' do
+        expect { create(:scheduled_recipe, saved_recipe_id: 3) }.to raise_error('Validation failed: Saved recipe must exist')
       end
     end
   end
