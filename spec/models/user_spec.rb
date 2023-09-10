@@ -4,6 +4,7 @@ require 'rails_helper'
 RSpec.describe User do
   describe 'relationships' do
     it { is_expected.to have_many(:saved_recipes) }
+    it { is_expected.to have_many(:scheduled_recipes).through(:saved_recipes) }
   end
 
   describe 'validations' do

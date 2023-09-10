@@ -1,6 +1,7 @@
 class SavedRecipe < ApplicationRecord
   ## RELATIONSHIPS
   belongs_to :user
+  has_many :scheduled_recipes
 
   ## VALIDATIONS
   validates :api_recipe_id, numericality: { only_integer: true }

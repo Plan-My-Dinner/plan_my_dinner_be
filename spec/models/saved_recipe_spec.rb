@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe SavedRecipe do
   describe 'relationships' do
     it { is_expected.to belong_to(:user) }
+    it { is_expected.to have_many(:scheduled_recipes) }
   end
 
   describe 'validations' do

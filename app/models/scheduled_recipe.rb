@@ -4,6 +4,6 @@ class ScheduledRecipe < ApplicationRecord
   has_one :user, through: :saved_recipe
 
   ## VALIDATIONS
-  validates :saved_recipe_id, presence: true
   validates :scheduled_date, presence: true
+  validates_associated :saved_recipe
 end
