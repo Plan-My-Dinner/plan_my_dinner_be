@@ -2,6 +2,11 @@ require 'rails_helper'
 # rubocop:disable RSpec/NestedGroups
 
 RSpec.describe User do
+  describe 'relationships' do
+    it { is_expected.to have_many(:saved_recipes) }
+    it { is_expected.to have_many(:scheduled_recipes).through(:saved_recipes) }
+  end
+
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
@@ -53,10 +58,6 @@ RSpec.describe User do
         it { is_expected.not_to allow_value('test@mail.500').for(:email) }
       end
     end
-  end
-
-  describe 'relationships' do
-    it { is_expected.to have_many(:saved_recipies) }
   end
 end
 # rubocop:enable RSpec/NestedGroups
