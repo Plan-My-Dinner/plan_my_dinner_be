@@ -55,6 +55,6 @@ def map_ingredients(recipe)
     }
   end
 
-  # Remove the nil
+  # Remove the nil values from the array
   ingredients.compact
 end
