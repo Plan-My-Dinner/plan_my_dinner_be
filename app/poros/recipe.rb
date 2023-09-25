@@ -11,14 +11,16 @@ class Recipe
     @link = data[:strSource].nil? ? nil : data[:strSource]
     @video_link = data[:strYoutube]
     @cuisine_type = data[:strArea]
-    @directions = data[:strInstructions]
+    # Change string block in array of strings
+    @directions = data[:strInstructions].split("\r\n")
     @ingredients = map_ingredients(data)
   end
 
-  def map_ingredients(data)
+  # Turn the 20 ingredient and measurmentattributes into an array of 20 hashes
+  def map_ingredients(attributes)
     ingredients = (1..20).map do |i|
-      ingredient = data[:"strIngredient#{i}"]
-      measurement = data[:"strMeasure#{i}"]
+      ingredient = attributes[:"strIngredient#{i}"]
+      measurement = attributes[:"strMeasure#{i}"]
 
       next if ingredient.blank? || measurement.blank?
 
