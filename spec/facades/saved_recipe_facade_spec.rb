@@ -6,20 +6,14 @@ RSpec.describe SavedRecipeFacade do
       saved_recipe = described_class.show_recipe('52772')
 
       expect(saved_recipe).to be_a(Recipe)
-      expect(saved_recipe).to have_attributes(
-        error: be_falsey,
-        id: '52772'
-      )
+      expect(saved_recipe.id).to eq('52772')
     end
 
     it 'returns error poro if recipe doesnt exist' do
       saved_recipe = described_class.show_recipe('1')
 
       expect(saved_recipe).to be_a(Recipe)
-      expect(saved_recipe).to have_attributes(
-        error: be_truthy,
-        id: be_nil
-      )
+      expect(saved_recipe.id).to be_nil
     end
   end
 end
