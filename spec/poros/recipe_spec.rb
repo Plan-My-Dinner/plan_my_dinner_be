@@ -73,6 +73,18 @@ RSpec.describe Recipe do
       recipe = described_class.new(data)
       expect(recipe.error).to be_falsey
     end
+
+    it 'has an array of ingredient hashes' do
+      recipe = described_class.new(data)
+      expect(recipe.ingredients).to be_an(Array)
+      expect(recipe.ingredients).to all(be_a(Hash))
+    end
+
+    it 'has an array of direction strings' do
+      recipe = described_class.new(data)
+      expect(recipe.directions).to be_an(Array)
+      expect(recipe.directions).to all(be_a(String))
+    end
   end
 
   context 'when a PORO is created with nil data' do

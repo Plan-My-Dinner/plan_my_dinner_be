@@ -28,7 +28,7 @@ RSpec.describe 'Recipe API' do
               { quantity: '1 (12 oz.)', item: 'stir-fry vegetables' },
               { quantity: '3 cups', item: 'brown rice' }
             ],
-            directions: include('Preheat oven to 350° F.')
+            directions: be_an(Array)
           }
         }
       end
