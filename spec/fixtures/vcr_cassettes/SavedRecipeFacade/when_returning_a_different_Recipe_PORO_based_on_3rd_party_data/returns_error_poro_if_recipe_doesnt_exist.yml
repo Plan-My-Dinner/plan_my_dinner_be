@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.themealdb.com/api/json/v1/1/lookup.php?i=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Sep 2023 16:52:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '14'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/7.4.33
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BMj3HWVCh2kcEjBlwPUXXcSh0lQzXkHrIcYvCVLPZR4DT9OYHCnX%2F%2BiUrzwKxG1qP%2B6v99JTEVSPFK7TFgy1TUEA62xn3JfwTJdRVVKexvnkPz1HqhVSxbc7QeQesOG6q9nT9A%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 80c4c74e18b84e02-MCI
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"meals":null}'
+  recorded_at: Mon, 25 Sep 2023 16:52:36 GMT
+recorded_with: VCR 6.2.0
