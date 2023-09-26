@@ -30,7 +30,7 @@ class SavedRecipeSerializer
         id: nil,
         type: 'error',
         attributes: {
-          error_msg: error,
+          error_msg: "No recipe has id #{error}",
           status:
         }
       }

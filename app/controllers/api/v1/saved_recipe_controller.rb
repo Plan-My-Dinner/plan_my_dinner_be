@@ -6,7 +6,7 @@ module Api
 
         ## Return error if recipe data isn't present
         if recipe.id.nil?
-          render json: SavedRecipeSerializer.recipe_error("No recipe has id #{params[:id]}", 503), status: :bad_request
+          render json: SavedRecipeSerializer.recipe_error(params[:id], 503), status: :bad_request
         else
           render json: SavedRecipeSerializer.find_recipe(recipe), status: :ok
         end
